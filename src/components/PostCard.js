@@ -30,7 +30,7 @@ export default function PostCard({ post: { body, createdAt, id, username, likeCo
                     content='Comment on post'
                     inverted
                     trigger={
-               <Button as='div' labelPosition='right' as={Link} to={`/posts/${id}`}>
+               <Button labelPosition='right' as={Link} to={`/posts/${id}`}>
                    <Button color='blue' basic>
                        <Icon name='comments' />
                    </Button>
