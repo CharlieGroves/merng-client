@@ -14,15 +14,6 @@ export default function Home() {
     const { loading, data: { getPosts: posts } = {} } = useQuery(
         FETCH_POSTS_QUERY
       );
-    
-    let numberColumns;
-
-    function numberOfColumns(width) {
-      if (width > 1000 && width < 2000)  numberColumns = 3;
-      else if (width > 2000 && width < 5000)  numberColumns = 4;
-      else if (width < 1000)  numberColumns = 2;
-      else numberOfColumns = 1;
-    }
 
     var number = Math.floor(window.innerWidth/500)
 

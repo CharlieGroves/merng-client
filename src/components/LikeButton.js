@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom'
 import { useMutation } from '@apollo/client'
 import gql from 'graphql-tag'
 import { Button, Icon, Label, Popup } from 'semantic-ui-react'
-import { findAllByAltText } from '@testing-library/react'
-
-function likePost(){
-    console.log('liked')
-}
 
 function LikeButton({ user, post: { id, likeCount, likes }}) {
 
