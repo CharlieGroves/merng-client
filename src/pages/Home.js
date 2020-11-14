@@ -18,7 +18,7 @@ export default function Home() {
     var number = Math.floor(window.innerWidth/500)
 
     if (number === 0) number = 1
-    if (number > 4) number = 4
+    if (number > 4) number = 3
 
     console.log(number)
 
