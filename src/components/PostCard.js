@@ -11,12 +11,6 @@ export default function PostCard({ post: { body, createdAt, id, username, likeCo
 
     const { user } = useContext(AuthContext)
 
-    //function deletePostCallback() {
-        //props.history.push('/')
-    //}
-
-    console.log(id)
-
     return (
         <Card fluid>
             <Card.Content>
@@ -39,7 +33,6 @@ export default function PostCard({ post: { body, createdAt, id, username, likeCo
                     </Label>
                </Button>}
                />
-               {console.log(username)}
                {user && user.username === username && <DeleteButton postId={id}/>}
             </Card.Content>
         </Card>

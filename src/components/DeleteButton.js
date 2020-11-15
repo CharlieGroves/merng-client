@@ -31,9 +31,7 @@ function DeleteButton({ callback, postId, commentId }) {
             postId,
             commentId
         }
-    })
-
-    console.log(postId)     
+    })  
 
     return (
         <>

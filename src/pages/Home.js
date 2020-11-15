@@ -20,8 +20,6 @@ export default function Home() {
     if (number === 0) number = 1
     if (number > 4) number = 3
 
-    console.log(number)
-
     return (
         <Grid columns={number}>
             <Grid.Row className='page-title'>
