@@ -73,6 +73,9 @@ export default function SinglePost(props) {
                                     {user && user.username === username && (
                                         <DeleteButton postId={id} callback={deletePostCallback}/>
                                     )}
+                                    <Button as='div' color='teal' floated='right' onClick={() => deletePostCallback()}>
+                                        <Icon name='arrow left' style={{ margin: 0 }} />
+                                    </Button>
                             </Card.Content>
                         </Card>
                         {user && 
