@@ -49,7 +49,7 @@ export default function SinglePost(props) {
         postMarkup = (
             <Grid>
                 <Grid.Row>
-                    <Grid.Column width={10}>
+                    <Grid.Column width={20}>
                         <Card fluid>
                             <Card.Content>
                                 <Card.Header>{username}</Card.Header>
