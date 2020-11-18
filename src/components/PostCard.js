@@ -16,7 +16,7 @@ export default function PostCard({ post: { body, createdAt, id, username, likeCo
             <Card.Content>
                 <Card.Header>{username}</Card.Header>
                 <Card.Meta as={Link} to={`/posts/${id}`}>{moment(createdAt).fromNow(true)}</Card.Meta>
-                <Card.Description>{body}</Card.Description>
+                <Card.Description className='wrap'>{body}</Card.Description>
             </Card.Content>
             <Card.Content extra>
                 <LikeButton user={user} post={{ id, likes, likeCount }} />
