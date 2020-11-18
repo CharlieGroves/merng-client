@@ -37,12 +37,17 @@ function DeleteButton({ callback, postId, commentId }) {
 
     let deleteButtonReturn; 
     
-    if (number < 2) { deleteButtonReturn =  <>
+    if (number < 2) { 
+        deleteButtonReturn =  
+        <>
                 <Button as='div' color='red' floated='right' onClick={() => setConfirmOpen(true)}>
                     <Icon name='trash' style={{ margin: 0 }} />
                 </Button>
         <Confirm open={confirmOpen} onConfirm={deletePostMutation} onCancel={() => setConfirmOpen(false)} />
-    </>} else { deleteButtonReturn = <>
+    </>
+    } else { 
+        deleteButtonReturn = 
+        <>
             <Popup
                 content={commentId ? 'Delete comment': 'Delete post'}
                 inverted
