@@ -18,3 +18,7 @@
     word-wrap: break-word;
     flex: inherit
 }
+
+.loading {
+    margin-left: 20px;
+}
