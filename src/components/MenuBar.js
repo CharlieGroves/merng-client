@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Segment, Confirm } from 'semantic-ui-react';
 import { Link } from 'react-router-dom'
 
 import { AuthContext } from '../context/auth'
@@ -10,8 +10,12 @@ function MenuBar() {
   const path = pathname === '/' ? 'home' : pathname.substr(1)
   
   const [activeItem, setActiveItem] = useState(path);
+  const [confirmOpen, setConfirmOpen]  = useState(false);
 
-  const handleItemClick = (e, { name }) => setActiveItem(name);
+  const handleItemClick = (e, { name }) => {
+    setActiveItem(name);
+    setConfirmOpen(false);
+  }
 
   const menuBar = user ? (
           <Menu pointing secondary size='massive' color='teal'>
@@ -24,8 +28,10 @@ function MenuBar() {
           <Menu.Menu position='right'>
                 <Menu.Item 
                     name='logout' 
-                    onClick={logout} 
+                    onClick={() => setConfirmOpen(true)}
+                    //onClick={logout} 
                 />
+                <Confirm open={confirmOpen} onConfirm={logout} onCancel={() => setConfirmOpen(false)} />
           </Menu.Menu>
       </Menu>
   ) : (
